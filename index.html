@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome links -->
+    <script src="https://use.fontawesome.com/395f23a01c.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+    <title> Quiz App | oop </title>
+  </head>
+  <body>
+        
+
+    <div class="final" style="display: none;">
+      <div class="container">
+       <h2>your answer :</h2>
+       <p class="score"></p>
+       <button id="again"> again </button>
+      </div>
+    </div>
+    
+    <div class="quiz" style="display: none;">
+      <div class="container">
+
+      <div class="count">
+        <p class="current">0</p>
+        <p>/</p>
+        <p class="total"></p>
+      </div>
+ 
+      <h4 id="question"></h4> <!-- دا ال هشتغل عليه غشان اعرض الاسئله -->
+        <!-- دول ال 4 اجابات ال معروضين ف ال api -->
+        <label id="a1" class="ans" ></label>
+        <label id="a2" class="ans" ></label>
+        <label id="a3" class="ans" ></label>
+        <label id="a4" class="ans" ></label>
+       
+        <button id="next">next</button>
+      </div>
+    </div>
+    
+      
+      
+
+       <div class="settings">
+         <div class="container">
+          <h2> Quiz</h2>
+      <div>   
+         <label for="category"> Select Category : </label>
+
+         <select id="category">
+           <option  value="9">General Knoelage |</option>
+           <option  value="18"> Science |</option>
+           <option  value="23"> History |</option>
+         </select>
+
+       </div>   
+
+         <div>
+           <label for="difficulty"> Select Difficulty : </label>
+
+           <label for="medium">
+             <input type="radio" id="medium">
+             medium
+           </label>
+
+           <label for="easy" >
+             <input type="radio" id="easy">
+             easy
+           </label>
+           <label for="difficult" >
+             <input type="radio" id="difficult" >
+             difficult
+           </label>
+
+         </div>
+         <div>
+            <label for="nQuestions"> Number of Questions : </label>
+            <input type="number" id="nQuestions" value="0">
+         </div>
+
+              <button  id="start"> Start Quiz </button>
+        </div>
+       </div>
+
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
